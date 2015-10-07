@@ -5,8 +5,17 @@
     if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
       window.location = "io.smalldatalab.pam://"
     }
+
+    function startPAM() {
+      document.location =  "io.smalldatalab.pam://restart";
+      setTimeout(function() {
+        if (confirm('You do not seem to have PAM-omh installed, do you want to go download it now?')) {
+          document.location = "https://appsto.re/us/pQun5.i";
+        }
+      }, 300);
+    }
   </script>
   <body>
-    <h1>Welcome to Small Data Lab!</h1>
+    <h1><a href="#" onclick="startPAM()">Restart PAM-omh</h1>
   </body>
 </html>
